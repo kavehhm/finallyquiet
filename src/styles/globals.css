@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+	scroll-margin-top: 5rem;
+}
+
+
+.carousel__control  {
+	font-size: 0;
+	line-height: 0;
+	text-indent: -100%;
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+	position: relative;
+	border: 0px solid !important;
+	margin: 0 2rem;
+	background: blue !important ;
+	border-radius: 50%;
+	box-shadow: none;
+	color: #00AFF0!important;
+
+    transition: all .1s ease-in-out;
+}
+.carousel__control:hover  {
+	transform: scale(1.05);
+}
+.carousel__control:active  {
+	transform: scale(1.1);
+}
+
+.carousel__slide {
+	position: absolute;
+	width: 11.875rem;
+	height: 11.875rem;
+	left: 0.625rem;
+	top: 0.625rem;
+	border: 0rem solid !important;
+	transition: transform 1s, opacity 1s;
+}
+
+.carousel__slide-overlay {
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.35s ease-in-out;
+	background-color: transparent !important;
+	user-select: none;
+}
+
+
+.finallyQuietStyling {
+	line-height: 1;
+	color: transparent;
+	background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: animate 5s linear infinite;
+	-webkit-background-size: 500%;
+	background-size: 500%;
+	text-align: center;
+
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0 100%;
+	}
+	50% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: 0 100%;
+	}
+}
